@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+10&family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link href="/src/styles.css" rel="stylesheet">
+  </head>
+  <body class=" overflow-x-clip bg-black pt-[1rem] pb-[2rem]">
+    <div id="mouse-follower" class="pointer-events-none fixed -translate-[50%] mix-blend-difference top-0 left-0 h-[1rem] aspect-square bg-white rounded-full z-[99999]"></div>
+    <canvas id="hero" class="fixed z-[90] w-full h-full bg-transparent pointer-events-none"></canvas>
+
+    <div class="px-[1rem]">
+      <div class="main relative border-[1px] border-white rounded-t-lg overflow-clip ">
+  
+        <header class="h-[4rem] flex justify-between items-center border-b-[1px] border-white text-[1.2rem] text-white absolute top-0 left-0 w-[100%] z-[50] font-gilroy">
+          <div class="border-r-[1px] border-white h-full px-[1rem] flex items-center">
+            <h2 class="text-[1.5rem] leading-[1.5rem]">Portfolio</h2>
+          </div>
+  
+          <nav class="hidden md:block absolute h-full top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
+            <ul class="flex justify-between items-center h-full whitespace-nowrap">
+              <li class="h-full flex items-center px-[0.5rem]"><a class="" href="#about">Home</a></li>
+              <li class="h-full flex items-center px-[0.5rem]"><a class="" href="#projects">Projects</a></li>
+              <li class="h-full flex items-center px-[0.5rem]"><a class="" href="#contact">I'am greate at</a></li>
+            </ul>
+          </nav>
+  
+          <div class="hidden md:flex social-media-links items-center border-l-[1px] h-[4rem] px-[0.5rem]">
+            <div class="magnet-effect flex items-center justify-center h-full px-[0.5rem]">
+              <a class="magnetic-item" href="#">
+                <img class=" h-[2rem] aspect-square" src="/social media icons/instagram.png" alt="">
+              </a>
+            </div>
+
+            <div class="magnet-effect flex items-center justify-center h-full px-[0.5rem]">
+              <a class="magnetic-item" href="#">
+                <img class="h-[2rem] aspect-square" src="/social media icons/Facebook.png" alt="">
+              </a>
+            </div>
+
+            <div class="magnet-effect flex items-center justify-center h-full px-[0.5rem]">
+              <a class="magnetic-item" href="#">
+                <img class="h-[2rem] aspect-square" src="/social media icons/Whatsapp.png" alt="">
+              </a>
+            </div>
+
+            <div class="magnet-effect flex items-center justify-center h-full px-[0.5rem]">
+              <a class="magnetic-item" href="#">
+                <img class="h-[2rem] aspect-square" src="/social media icons/Linkedin.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="md:hidden h-full flex flex-col gap-[0.3rem] items-center justify-center border-l-[1px] border-white px-[1rem]">
+              <div class="w-[2rem] bg-white h-[2px]"></div>
+              <div class="w-[2rem] bg-white h-[2px]"></div>
+          </div>
+        </header>
+  
+        <!-- Hero Section -->
+       <div class="hero relative h-[90vh] md:min-h-screen px-[2rem]">
+          <div class="flex flex-col items-center h-full w-full absolute top-[15%] left-0 z-[0]">
+            <h1 class="special-text z-[40] text-white text-[1.5rem] leading-[2rem] select-none">Creative frontend developer</h1>
+            <h2 class="special-text font-jersey-10 text-[4.5rem] md:text-[5rem] leading-[5rem] tracking-wide select-none">NITESH KUMAR</h2>
+  
+            <div class="flex gap-[1rem]">
+              <p>[ 06:30 PM ]</p>
+              <img class="inver-color" src="/social media icons/Arrow.png" alt="">
+              <p> 2025</p>
+            </div>
+  
+              <p data-scroll data-scroll-speed="0.3" class="select-none px-[2rem] special-text w-full md:w-[25%] text-gray-300 text-[1.1rem] absolute top-[57%] md:top-[50%] left-0 -translate-y-[50%] ">
+              I am a passionate frontend developer with expertise in creating beautiful and interactive web experiences. 
+              Specializing in modern web technologies, I transform ideas into engaging digital solutions.
+              </p>
+  
+              <p data-scroll data-scroll-speed="0.3" class="hidden md:block select-none px-[2rem] special-text w-full md:w-[25%] text-right text-gray-300 text-[1.1rem] absolute top-[80%] md:top-[70%] right-0 -translate-y-[50%] ">
+              My tech stack includes cutting-edge tools like Three.js for stunning 3D graphics, GSAP for smooth animations, 
+              and Framer Motion for fluid UI transitions.
+              </p>
+
+              <div data-scroll data-scroll-speed="0.2" class="md:hidden px-[2rem] special-text w-full md:w-[25%] text-right text-gray-300 text-[1.1rem] absolute top-[78%] md:top-[70%] right-0 -translate-y-[50%] ">
+                <button class="text-[2rem] leading-none">Contact Us</button>
+                <p>email.niteshkr@gmail.com</p>
+              </div>
+  
+          </div>
+        </div>
+        
+  
+        <!-- Work -->
+        <section id="work-container" class="relative py-[3rem] bg-white text-black px-[2rem]">
+          <div id="work-heading" class="">
+            <div>
+              <h2 class="text-[2.6rem] md:text-[6rem] flex flex-col md:flex-row md:items-center gap-[1.3rem] leading-none">
+                <span class="special-text select-none">Creative Frontend Developer</span> 
+                <span class="special-button w-fit text-[1.5rem] overflow-hidden uppercase border-[1px] border-black px-[1rem] py-[0.3rem] rounded-lg select-none relative">
+                  <span class="highlighter translate-y-[105%] absolute top-0 left-0 h-full w-full bg-black text-white flex items-center justify-center">PROJECTS</span>
+                  <span>projects</span>
+                </span>
+              </h2>
+            </div>
+          </div>
+    
+    
+            <div id="work" class="relative z-[0] mt-[2rem] md:mt-[5rem] text-[1.5rem] gap-[0.2rem] flex md:justify-between items-start">
+              <div class="project-headings">
+                <div class="hidden md:flex items-center gap-[0.5rem]">
+                  <h2 class="overflow-hidden border-[1px] border-black w-fit px-[1rem] py-[0.2rem] rounded-lg text-[1rem] uppercase relative">
+                    <span>Explore my PROJECTS</span>
+                  </h2>
+
+                  <!-- <div class="border-[1px] rounded-lg px-[1rem] bg-black text-white">
+                    <svg class="w-[2rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                    </svg>
+                  </div> -->
+                </div>
+                <h3 class="text-[1.8rem] leading-[2.5rem] mt-[0.5rem] w-fit project-title font-[400] select-none italic">Reimagined Epic Games</h3>
+                <h3 class="text-[1.8rem] leading-[2.5rem] w-fit project-title font-[400] select-none italic">Guitar Kaksha</h3>
+                <h3 class="text-[1.8rem] leading-[2.5rem] w-fit project-title font-[400] select-none italic">Brandtec</h3>    
+              </div>
+
+               <p class="hidden md:block special-text text-[1.3rem] select-none">More exciting projects are cooking ...</p>
+            </div>
+
+            <div class="bg-white mt-[16rem] md:mt-[14rem] flex justify-between items-center">
+              <div class="flex flex-col gap-[0.7rem] justify-center items-center">
+                <p class="text-[2.7rem] md:text-[3rem] leading-[2rem] font-[500]">10+</p>
+                <p class="text-[1.3rem] leading-[1.5rem] text-center">Minor projects</p>
+              </div>
+              <div class="flex flex-col gap-[0.7rem] justify-center items-center">
+                <p class="text-[2.7rem] md:text-[3rem] leading-[2rem] font-[500]">3+</p>
+                <p class="text-[1.3rem] leading-[1.5rem] text-center">Major projects</p>
+              </div>
+              <div class="flex flex-col gap-[0.7rem] justify-center items-center">
+                <span class="text-[2.7rem] md:text-[3rem] leading-[2rem] font-[500] flex items-start gap-[0.3rem]">4.5</span>
+                <p class="text-[1.3rem] leading-[1.5rem] text-center">Fiverr Ratings</p>
+              </div>
+            </div>
+          </section>
+  
+  
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="w-[100%] mt-[1rem] py-[2rem] md:py-[5rem] px-[2rem] mx-auto">
+          <h2 class="text-[4.3rem] md:text-[6rem]  leading-[7rem] w-fit mx-auto special-text text-center font-jersey-10">My Tech Stack</h2>
+          <p class="special-text z-[100] backdrop-blur-lg rounded-lg relative text-[1.2rem] p-[1rem] w-[100%] md:w-[70%] mx-auto text-center text-white">I specialize in creating responsive web applications using vanilla js, React.js and Next.js. Proficient in modern CSS frameworks like Tailwind CSS and styling libraries. Experienced with UI animation libraries including GSAP and Framer Motion. Strong Git collaboration, problem-solving abilities and commitment to writing clean code.</p>
+  
+          <div class="w-full mt-[5rem]">
+            <div class="flex w-full md:w-[80%] z-[100]  mx-auto overflow-hidden relative">
+              <div class="absolute top-0 left-0 w-[20%] h-full bg-gradient-to-r from-black to-transparent z-[20]"></div>
+                <div class="absolute top-0 right-0 w-[20%] h-full bg-gradient-to-l from-black to-transparent z-[20]"></div>
+              <div class="shrink-0 loop-marquee mx-auto flex gap-[1rem] mt-[3rem] pr-[1rem]">
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-amber-500 text-[1.5rem]"><i class="ri-html5-fill"></i></span>
+                  <p class="">Html</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-blue-500 text-[1.5rem]"><i class="ri-css3-fill"></i></span>
+                  <p class="">CSS</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+              </div>
+    
+    
+              <div class="shrink-0 loop-marquee mx-auto flex gap-[1rem] mt-[3rem] pr-[1rem]">
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-amber-500 text-[1.5rem]"><i class="ri-html5-fill"></i></span>
+                  <p class="">Html</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-blue-500 text-[1.5rem]"><i class="ri-css3-fill"></i></span>
+                  <p class="">CSS</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-full md:w-[80%] z-[100] mx-auto overflow-hidden relative mt-[1rem]">
+                <div class="absolute top-0 left-0 w-[20%] h-full bg-gradient-to-r from-black to-transparent z-[20]"></div>
+                <div class="absolute top-0 right-0 w-[20%] h-full bg-gradient-to-l from-black to-transparent z-[20]"></div>
+              <div class="shrink-0 loop-marquee-reverse mx-auto flex gap-[1rem] pr-[1rem]">
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-amber-500 text-[1.5rem]"><i class="ri-html5-fill"></i></span>
+                  <p class="">Html</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-blue-500 text-[1.5rem]"><i class="ri-css3-fill"></i></span>
+                  <p class="">CSS</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+              </div>
+    
+    
+              <div class="shrink-0 loop-marquee-reverse mx-auto flex gap-[1rem] pr-[1rem]">
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-amber-500 text-[1.5rem]"><i class="ri-html5-fill"></i></span>
+                  <p class="">Html</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-blue-500 text-[1.5rem]"><i class="ri-css3-fill"></i></span>
+                  <p class="">CSS</p>
+                </div>
+      
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+                <div class="flex items-center gap-[0.3rem] w-fit bg-white text-black text-[1.1rem] px-[1.2rem] py-[0.5rem] font-[400] rounded-full">
+                  <span class="text-[1.5rem]"><i class="ri-sun-fill"></i></span>
+                  <p class="">Saas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="h-[3rem] md:h-[7vh] w-full"></section>
+        
+      </div>
+      <footer class="relative py-[0.5rem] text-black flex items-center justify-between bg-white">
+          <h2 class="font-jersey-10 text-[1.5rem]">NITESH KUMAR</h2>
+    
+          <div class="social-media-links absolute left-[50%] top-[50%] -translate-y-[50%] -translate-x-[50%] flex gap-[1rem] px-[1rem] py-[1rem]">
+            <a href="#">
+              <img class="h-[1.8rem] aspect-square" src="/social media icons/instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img class="h-[1.8rem] aspect-square" src="/social media icons/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img class="h-[1.8rem] aspect-square" src="/social media icons/Whatsapp.png" alt="">
+            </a>
+            <a href="#">
+              <img class="h-[1.8rem] aspect-square" src="/social media icons/Linkedin.png" alt="">
+            </a>
+          </div>
+    
+          <div class="flex gap-[1rem]">
+            <p>[ 06:30 PM ]</p>
+            <img class="w-[5rem] object-cover object-[100%_50%]" src="/social media icons/Arrow.png" alt="">
+            <p> 2025</p>
+          </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

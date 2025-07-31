@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: clamp(14px, 1vw, 20px);
+    font-family: "Gilroy";
+    color: white;
+}
+
+
+.font-jersey-10 {
+    font-family: "Jersey 10", sans-serif;
+  }
+
+.font-gilroy{
+    font-family: "Gilroy";
+  }
+
+.inver-color{
+    filter: invert(1);
+}
+
+.infinite-marquee{
+  animation-name: infinite-marquee;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.infinite-marquee-reverse{
+  animation-name: infinite-marquee;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes infinite-marquee {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.loop-marquee{
+  animation-name: loop-marquee;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.loop-marquee-reverse{
+  animation-name: loop-marquee;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes loop-marquee {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.font-dancing-script{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
