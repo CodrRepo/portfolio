@@ -2,65 +2,65 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Thin.ttf');
+    src: url('/fonts/Gilroy-Thin.ttf');
     font-weight: 50;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-UltraLight.ttf');
+    src: url('/fonts/Gilroy-UltraLight.ttf');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Light.ttf');
+    src: url('/fonts/Gilroy-Light.ttf');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Regular.ttf');
+    src: url('/fonts/Gilroy-Regular.ttf');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Medium.ttf');
+    src: url('/fonts/Gilroy-Medium.ttf');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-SemiBold.ttf');
+    src: url('/fonts/Gilroy-SemiBold.ttf');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Bold.ttf');
+    src: url('/fonts/Gilroy-Bold.ttf');
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-ExtraBold.ttf');
+    src: url('/fonts/Gilroy-ExtraBold.ttf');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Black.ttf');
+    src: url('/fonts/Gilroy-Black.ttf');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/public/fonts/Gilroy-Heavy.ttf');
+    src: url('/fonts/Gilroy-Heavy.ttf');
     font-weight: 900;
     font-style: normal;
 }

@@ -116,14 +116,14 @@ window.addEventListener("mousemove", (event) => {
   })
 
 
-  // if (!isMagneticElement) {
-  //   gsap.to(mouseFollower, {
-  //     left: xpos,
-  //     top: ypos,
-  //     duration: 0.35,
-  //     ease: CustomEase.create("custom", "0.22, 1, 0.36, 1"),
-  //   })
-  // }
+  if (!isMagneticElement) {
+    gsap.to(mouseFollower, {
+      left: xpos,
+      top: ypos,
+      duration: 0.35,
+      ease: CustomEase.create("custom", "0.22, 1, 0.36, 1"),
+    })
+  }
 
 })
 
